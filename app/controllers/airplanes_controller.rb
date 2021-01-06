@@ -1,4 +1,5 @@
 class AirplanesController < ApplicationController
+
   def new
     @airplane = Airplane.new
 
@@ -17,8 +18,10 @@ class AirplanesController < ApplicationController
   end
 
   def show
-    @airplane = Airplane.find params[:id]
+    headers['Access-Control-Allow-Origin'] = '*'
 
+    @airplane = Airplane.find params[:id]
+    render json: @airplane
   end
 
   def edit
