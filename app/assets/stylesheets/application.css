@@ -29,7 +29,6 @@ body{
 
 .heading{
 
-
 }
 
 
@@ -37,4 +36,18 @@ body{
   width: 10%;
   position: relative;
   left: 40%;
+}
+
+
+
+.header {
+  padding: 6%;
+  text-align: center;
+  background-image: url("https://i.ibb.co/zxcnYNn/Ce-Ay-Dk-X-clouds-wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  color: Black;
+  font-size: 30px;
+
 }

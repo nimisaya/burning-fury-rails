@@ -1,9 +1,42 @@
 <h2> Airplane: <%= @airplane.name %></h2>
 
-<%= @airplane.name %>
+<ul class="form-style-1">
 
-<h2>columns:</h2>
-<%= @airplane.columns %>
+<li>
+<h2><%= @airplane.name %></h2>
+</li>
 
-<h2>rows:</h2>
+<li>
+<strong>columns:</strong>
 <%= @airplane.columns %>
+</li>
+
+<li>
+<strong>rows:</strong>
+<%= @airplane.rows %>
+</li>
+<br>
+
+<strong> Total available seats: </strong>
+<br>
+<%= @seats %>
+
+
+
+<!-- 
+
+<script>
+  var table ='';
+
+  for (var r=0; r< <%=@airplane.rows%>;r++){
+    table += '<tr>'
+    for (var c=0; c< <%= @airplane.columns%>; c++){
+      table += '<td ' +'class='+r +' id='+ c +'> '+ '<img class=pic src=""> ' +'</td>'
+    }
+    table += '</tr>'
+    }
+  $('#airplane').html(table)
+}
+
+</ul>
+</script> -->

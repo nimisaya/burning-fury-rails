@@ -22,10 +22,12 @@ class AirplanesController < ApplicationController
   end
 
   def show
-    headers['Access-Control-Allow-Origin'] = '*'
+    # headers['Access-Control-Allow-Origin'] = '*'
 
     @airplane = Airplane.find params[:id]
-    render json: @airplane
+    # render json: @airplane
+
+    @seats = @airplane.rows.to_i*@airplane.columns.to_i
   end
 
   def edit
