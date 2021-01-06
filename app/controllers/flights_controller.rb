@@ -1,5 +1,9 @@
 class FlightsController < ApplicationController
 
+
+  skip_before_action :verify_authenticity_token, raise: false
+
+
   def new
   # for the form#with
   @flight = Flight.new
@@ -11,9 +15,16 @@ class FlightsController < ApplicationController
 
 
     redirect_to flight_path(74) #redirect to flights showpage
+
+
+
+
   end
 
   def index
+
+    headers['Access-Control-Allow-Origin'] = '*'
+    render json: Flight.all
   end
 
   def show
