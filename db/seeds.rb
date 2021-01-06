@@ -33,9 +33,9 @@ puts "created #{Flight.count} flights"
 ## will need to add password/login details later ##
 print "creating users..."
 
-u1= User.create! username:"reecen96"
-u2= User.create! username:"andrea32"
-u3= User.create! username:"xxpeterparkerxx"
+u1= User.create! username:"reecen96", password: "chicken", email: "reece@gmail.com"
+u2= User.create! username:"andrea32", password: "chicken", email: "andre@gmail.com"
+u3= User.create! username:"xxpeterparkerxx", password: "chicken", email: "peter@gmail.com"
 
 puts "created #{User.count} users"
 
@@ -47,9 +47,9 @@ print "creating reservations..."
 
 Reservation.destroy_all
 
-r1= Reservation.create! rown: 2, column: 'd'
-r2= Reservation.create! rown: 10, column: 'c'
-r3= Reservation.create! rown: 8, column: 'k'
+r1= Reservation.create! row: 2, column: 'd'
+r2= Reservation.create! row: 10, column: 'c'
+r3= Reservation.create! row: 8, column: 'k'
 
 puts "created #{Reservation.count} reservations"
 
@@ -81,5 +81,5 @@ puts "testing airplane -< flight associations"
 puts "the flight #{Flight.first.flightNumber} is flown by airplane #{Flight.first.airplane.name}"
 puts "__________________________________"
 puts "testing reservations associations"
-puts "the Reservation for seat #{Reservation.first.rown}#{Reservation.first.column}
+puts "the Reservation for seat #{Reservation.first.row}#{Reservation.first.column}
 was made by the passanger #{Reservation.first.user.username} for flight #{Reservation.first.flight.flightNumber} with the airplane #{Reservation.first.flight.airplane.name}"

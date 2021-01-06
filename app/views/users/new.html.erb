@@ -1,0 +1,14 @@
+<h2> Create an account</h2>
+
+<%= form_with model: @user, local: true do |f| %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <br>
+
+  <%= f.submit 'Sign up' %>
+<% end %>
