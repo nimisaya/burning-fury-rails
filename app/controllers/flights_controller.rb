@@ -7,8 +7,10 @@ class FlightsController < ApplicationController
   end
 
   def create
-    flight = Flight.create flight_params
-    redirect_to flight_path( flight.id) #redirect to flights showpage
+    flight = Flight.new flight_params
+
+
+    redirect_to flight_path(74) #redirect to flights showpage
   end
 
   def index
@@ -31,7 +33,7 @@ class FlightsController < ApplicationController
 
   private
   def flight_params
-  params.require(:flight).permit(:title, :image)
+  params.require(:flight).permit(:flightNumber, :origin, :date, :destination, :id)
    end
 
 end
