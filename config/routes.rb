@@ -34,7 +34,8 @@ resources :users
 
 #create all 7 crud routes for the flights model
 resources :flights
-
+resources :airplanes
+resources :reservations
 
 
 end

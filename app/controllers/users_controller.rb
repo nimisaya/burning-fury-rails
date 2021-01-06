@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def index
+    headers['Access-Control-Allow-Origin'] = '*'
+    render json: User.all
   end
 
   def show
