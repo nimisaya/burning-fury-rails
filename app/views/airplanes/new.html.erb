@@ -1,2 +1,18 @@
-<h1>Airplanes#new</h1>
-<p>Find me in app/views/airplanes/new.html.erb</p>
+<h2>Add an airplane to the fleet</h2>
+
+<%= form_with model: @airplane, local: true do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :rows %>
+<%= f.text_field :rows %> <br>
+
+<%= f.label :columns %>
+<%= f.text_field :columns %> <br>
+
+
+
+<%= f.submit %>
+
+<% end %>

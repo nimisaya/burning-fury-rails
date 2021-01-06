@@ -11,14 +11,11 @@ class FlightsController < ApplicationController
   end
 
   def create
-    flight = Flight.new flight_params
+    flight = Flight.create flight_params
 
 
-    redirect_to flight_path(74) #redirect to flights showpage
-
-
-
-
+    redirect_to flight_path(flight.id)
+     #redirect to flights showpage
   end
 
   def index

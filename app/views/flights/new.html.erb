@@ -12,6 +12,8 @@
 <%= f.label :destination %>
 <%= f.text_field :destination %> <br>
 
+<%= f.hidden_field :id, :value => @flight.id %>
+
 <%= f.submit %>
 
 <% end %>

@@ -3,6 +3,11 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    reservation = Reservation.create reservation_params
+
+    redirect_to reservation_path(reservation.id)
+     #redirect to flights showpage
+
   end
 
   def index
@@ -21,4 +26,9 @@ class ReservationsController < ApplicationController
 
   def destroy
   end
+
+  private
+  def reservation_params
+  params.require(:reservation).permit(:row, :column, :user_id, :flight_id)
+   end
 end
