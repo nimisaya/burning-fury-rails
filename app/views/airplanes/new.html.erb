@@ -1,18 +1,33 @@
-<h2>Add an airplane to the fleet</h2>
+
 
 <%= form_with model: @airplane, local: true do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name %> <br>
 
-<%= f.label :rows %>
-<%= f.text_field :rows %> <br>
+<ul class="form-style-1">
+  <h2 class= "heading">Add an airplane </h2>
 
-<%= f.label :columns %>
-<%= f.text_field :columns %> <br>
+    <li>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %> <br>
+    </li>
+    <li>
+      <%= f.label :rows %>
+      <%= f.text_field :rows %> <br>
+
+    </li>
+
+    <%= f.label :columns %>
+    <%= f.text_field :columns %> <br>
+
+    </li>
+
+    <br>
+    <br>
+    <%= f.submit "add to fleet"%>
+
+</ul>
 
 
-
-<%= f.submit %>
 
 <% end %>

@@ -1,14 +1,45 @@
-<h2> Create an account</h2>
+
+<% if @user.errors.full_messages.any? %>
+<strong>Please correct the following errors:</strong>
+<ul>
+<% @user.errors.full_messages.each do |error| %>
+<li> <%= error %> </li>
+<% end %>
+</ul>
+<% end %>
+
+
+
 
 <%= form_with model: @user, local: true do |f| %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %>
-  <br>
+<ul class="form-style-1">
+  <h2 class= "heading"> Create account</h2>
 
-  <%= f.submit 'Sign up' %>
+    <li>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br> <br>
+    </li>
+    <li>
+      <%= f.label :password %>
+      <%= f.text_field :password %> <br>
+
+    </li>
+
+    <%= f.password_field :password_confirmation %> <br>
+    <br>
+
+    </li>
+
+
+    <br>
+    <%= f.submit "create account"%>
+
+</ul>
+
+
+
 <% end %>

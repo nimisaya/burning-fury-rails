@@ -1,2 +1,19 @@
-<h1>Flights#edit</h1>
-<p>Find me in app/views/flights/edit.html.erb</p>
+
+<h2>Create a flight</h2>
+
+<%= form_with model: @flight, local: true do |f| %>
+
+<%= f.label :flightNumber %>
+<%= f.text_field :flightNumber %> <br>
+
+<%= f.label :origin %>
+<%= f.text_field :origin %> <br>
+
+<%= f.label :destination %>
+<%= f.text_field :destination %> <br>
+
+<%= f.hidden_field :id, :value => @flight.id %>
+
+<%= f.submit %>
+
+<% end %>
