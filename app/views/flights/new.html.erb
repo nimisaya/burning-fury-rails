@@ -1,0 +1,15 @@
+
+<h2>Create a flight</h2>
+
+<%= form_with model: @flight, local: true do |f| %>
+
+<%= f.label :flightNumber %>
+<%= f.text_field :flightNumber %>
+
+<%= f.label :origin %>
+<%= f.text_field :origin %>
+
+<%= f.label :destination %>
+<%= f.text_field :destination %>
+
+<%= f.submits %>

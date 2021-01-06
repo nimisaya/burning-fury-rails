@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   def destroy
   end
 
-  def private user_params
+  private
+  def user_params
     params.require(:user).permit(:email, :password)
   end
 

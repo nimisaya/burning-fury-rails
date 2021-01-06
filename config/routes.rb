@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
 #redirects you when you login
 root to: 'pages#home'
 #Login/logout routes
@@ -30,6 +31,9 @@ resources :users
 #        PUT    /users/:id(.:format)      users#update
 #        DELETE /users/:id(.:format)      users#destroy
 
+
+#create all 7 crud routes for the flights model
+resources :flights
 
 
 
